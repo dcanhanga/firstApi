@@ -8,6 +8,11 @@ module.exports = [
     method: 'GET',
     handler: defaultRout
    },
+   {
+    endPoint: '/users/:id',
+    method: 'GET',
+    handler: UserController.getUsersById
+   },
   {
    endPoint: '/users',
    method: 'GET',
@@ -19,11 +24,19 @@ module.exports = [
     method: 'POST',
     handler: UserController.createUser
    },
- 
-  {
+
+   {
     endPoint: '/users/:id',
-    method: 'GET',
-    handler: UserController.getUsersById
-   }
+    method: 'PUT',
+    handler: UserController.updateUser
+   },
+
+   {
+    endPoint: '/users/:id',
+    method: 'DELETE',
+    handler: UserController.deleteUser
+   },
+   
+   
  
 ]
